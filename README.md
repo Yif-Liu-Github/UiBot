@@ -3,8 +3,7 @@ Uibot learning
 
 
 ## Day 01
-### 变量赋值（可赋值立即数值，表达式，函数返回值等）
-### 变量名不区分大小写，类型可动态改变
+### 变量赋值（变量名不区分大小写，类型可动态改变）
 Dim 变量名=值, 变量名=值  
 Const 常量名=值, 常量名=值
 函数型：函数型的值只能是已经定义好的函数  
@@ -31,19 +30,30 @@ TracePrint(a_1,a_b,c,tr,s1,s2,s3,ar,dic["arr"][1])
 ### 条件分支（以If 开头，以End If结尾）
 ```
 if a=3//判断条件是否成立
-TracePrint(a)
-elseif a=2
-TracePrint(a)
-elseif a=1
-TracePrint(a) 
-Else
-TracePrint(0)
+      TracePrint(a)
+  elseif a=2
+      TracePrint(a)
+  elseif a=1
+      TracePrint(a) 
+  Else
+  TracePrint(0)
 End If//结束判断
 ```
 
 ### 计次循环（以for 开头，以next结尾，step控制步长）
 ```
 for i=1 to 10 step 2//从1到10循环，每次增加1
-TracePrint(i) //执行语句
+  TracePrint(i) //执行语句，打印输出
 Next//进入下个循环
+```
+```
+For Each em In ar//循环ar数组第一层
+   TracePrint(em)//打印输出第一层元素
+   If Len(em)>1//如果第一层元素包含多个内容
+        For Each em2 In em//进入第一层元素，继续循环遍历
+            TracePrint(em2)//打印输出第二层元素
+        Next
+   End If
+Next
+
 ```
