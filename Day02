@@ -1,0 +1,22 @@
+## Day02 条件循环，继续循环，跳出循环，捕获异常，退出流程，跳出返回
+```
+dim a_1=1
+
+Do While a_1<10//当循环
+    a_1=a_1+1
+    If a_1=5
+        Continue
+    End If
+    TracePrint(a_1)
+Loop
+
+
+Do Until a_1<1//直到循环
+    a_1=a_1-1
+    If a_1=5
+        Break
+    End If
+    TracePrint(a_1)
+Loop
+
+```
