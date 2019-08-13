@@ -42,10 +42,10 @@ for i=1 to 10 step 2//从1到10循环，每次增加1
 Next//进入下个循环
 ```
 ```
-For Each em In ar//循环ar数组第一层
-   TracePrint(em)//打印输出第一层元素
-   If Len(em)>1//如果第一层元素包含多个内容
-        For Each em2 In em//进入第一层元素，继续循环遍历
+For Each emk,emv In dic//循环dic字典第一层
+   TracePrint(emk,emv)//打印输出第一层元素
+   If Len(emv)>1//如果第一层元素值包含多个内容
+        For Each em2 In emv//进入第一层元素，继续循环遍历
             TracePrint(em2)//打印输出第二层元素
         Next
    End If
