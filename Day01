@@ -50,12 +50,12 @@ TracePrint(DayOfMonth)
 
 ### 计次循环（以for 开头，以next结尾，step控制步长）
 ```
-for i=1 to 10 step 2//从1到10循环，每次增加1
+for i=1 to 10 step 2//从1到10循环，每次增加1，这里i无需dim声明，但作用域仅限于循环体内，体外不可用
   TracePrint(i) //执行语句，打印输出
 Next//进入下个循环
 ```
 ```
-For Each emk,emv In dic//循环dic字典第一层
+For Each emk,emv In dic//循环dic字典第一层，emk，emv分别储存键和值，这里无需dim声明，但作用域仅限于循环体内
    TracePrint(emk,emv)//打印输出第一层元素
    If Len(emv)>1//如果第一层元素值包含多个内容
         For Each em2 In emv//进入第一层元素，继续循环遍历
