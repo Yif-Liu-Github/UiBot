@@ -1,23 +1,27 @@
 ## 条件循环，继续循环，跳出循环，捕获异常，退出流程，跳出返回
-### 循环
+
+### do while循环（while也可放loop后面）
 ```
 dim a_1=1
 
-Do While a_1<10//当循环
+Do While a_1<10//
     a_1=a_1+1
     If a_1=5
-        Continue
+        Continue//跳出本次循环体，继续循环
+    elseif a_1=9
+        break//结束循环
     End If
     TracePrint(a_1)
 Loop
+//输出2 3 4 6 7 8 
 
-
-Do Until a_1<1//直到循环
-    a_1=a_1-1
-    If a_1=5
-        Break
-    End If
-    TracePrint(a_1)
-Loop
-
+###do until循环（until也可放loop后面）
 ```
+Do Until Time.Hour() > 18              // 判断当前时间中的小时数，只要不大于18就循环
+    TracePrint("还没有到下班时间")      // 每次循环，都会执行这里的语句
+    Delay(1000)                        // 每判断一次，休息一秒钟
+Loop
+TracePrint("下班时间到啦")              // 如果大于18，则跳出循环，执行这里的语句
+```
+
+###
